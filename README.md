@@ -1,5 +1,5 @@
 ![logo](./assets/coinmarketcap-logo-2.jpg)
-![version](https://img.shields.io/badge/version-1.0-blue) ![enviroment](https://img.shields.io/badge/enviroment-Nodejs-green) ![language](https://img.shields.io/badge/language-Javascript-yellow) 
+ ![version](https://img.shields.io/badge/version-1.0-blue) ![enviroment](https://img.shields.io/badge/enviroment-Nodejs-green) ![language](https://img.shields.io/badge/language-Javascript-yellow) 
 
 ## Introduction
 
