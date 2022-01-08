@@ -1,14 +1,14 @@
 import api from "./api/rest.api.js";
 
-class marketcap{
+class marketcap {
      constructor(config = {
           apiVersion: 'v3',
           pathModel: 'data-api',
-     }){
+     }) {
           this.config = config;
      }
 
-     async all(){
+     async all() {
           try {
                var coins = await api.get(`/${this.config.pathModel}/${this.config.apiVersion}/map/all`);
                return coins.data;
@@ -17,16 +17,16 @@ class marketcap{
           }
      }
 
-     async coinMap(coin = ''){
+     async coinMap(coin = '') {
           try {
                var coins = await api.get(`/${this.config.pathModel}/${this.config.apiVersion}/map/all`);
                coins = coins.data;
                var arr = [];
-               for(var ex of coins.data.cryptoCurrencyMap){
-                    if(coin == ex.name || coin == ex.slug){
+               for (var ex of coins.data.cryptoCurrencyMap) {
+                    if (coin == ex.name || coin == ex.slug) {
                          ex.criticalStatus = ex.is_active == 1 ? 'coin actived' : 'Inative coin';
                          arr.push(ex)
-                    }else if(coin == ''){
+                    } else if (coin == '') {
                          arr.push(ex)
                     }
                }
@@ -36,16 +36,36 @@ class marketcap{
           }
      }
 
-     async exchangeMap(exchange = ''){
+
+     async halfYear(cryptoID = 1) {
+          try {
+               var coins = await api.get(`/${this.config.pathModel}/${this.config.apiVersion}/price-prediction/query/half-year?cryptoId=${cryptoID}`);
+               return coins.data;
+          } catch (error) {
+               return error;
+          }
+
+     }
+
+     async rank() {
+          try {
+               var coins = await api.get(`/${this.config.pathModel}/${this.config.apiVersion}/topsearch/rank`);
+               return coins.data.data.cryptoTopSearchRanks;
+          } catch (error) {
+               return error;
+          }
+     }
+
+     async exchangeMap(exchange = '') {
           try {
                var coins = await api.get(`/${this.config.pathModel}/${this.config.apiVersion}/map/all`);
                coins = coins.data;
                var arr = [];
-               for(var ex of coins.data.exchangeMap){
-                    if(exchange == ex.name || exchange == ex.slug){
+               for (var ex of coins.data.exchangeMap) {
+                    if (exchange == ex.name || exchange == ex.slug) {
                          ex.criticalStatus = ex.is_active == 1 ? 'exchange actived' : 'Inative Exchange';
                          arr.push(ex)
-                    }else if(exchange == ''){
+                    } else if (exchange == '') {
                          arr.push(ex)
                     }
                }
