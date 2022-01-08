@@ -1,0 +1,48 @@
+{
+  "name": "coinmarketcap-api",
+  "version": "1.0.0",
+  "description": "api for coinmarketcap",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sttarMicroTech/coinmarketcap-api.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "etherium",
+    "litecoin",
+    "dashcoin",
+    "binancecoin",
+    "exchange",
+    "BTC",
+    "USDT",
+    "BNB",
+    "SOL",
+    "ETH",
+    "RC20",
+    "Network",
+    "bitcore",
+    "marketcap",
+    "coinmarketcap",
+    "coinmarketcap-api",
+    "api",
+    "bitcoin",
+    "bitcoin-price",
+    "altcoins"
+  ],
+  "author": "ratts13",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sttarMicroTech/coinmarketcap-api/issues"
+  },
+  "homepage": "https://github.com/sttarMicroTech/coinmarketcap-api#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "axios-cookiejar-support": "^2.0.3",
+    "tough-cookie": "^4.0.0"
+  }
+}
