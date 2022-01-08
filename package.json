@@ -1,6 +1,6 @@
 {
-  "name": "coinmarketcap-api",
-  "version": "1.0.0",
+  "name": "coinmarketcaps-api",
+  "version": "1.0.1",
   "description": "api for coinmarketcap",
   "main": "index.js",
   "scripts": {

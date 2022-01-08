@@ -13,7 +13,7 @@ Api for coinmarketcap, where it is possible to obtain information on daily quote
 download this repository at the root of your project or use NPM to install this library in your Node project.
 
 ```sh
-~$ npm install coinmarketcap-api --save
+~$ npm install coinmarketcaps-api --save
 ```
 
 ## import
