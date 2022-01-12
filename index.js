@@ -1,5 +1,6 @@
 import api from "./api/rest.api.js";
 import headersControllers from "./controllers/headers.controllers.js";
+import socketController from "./controllers/socket.controller.js";
 
 class marketcap {
      constructor(config = {
@@ -16,6 +17,14 @@ class marketcap {
           } catch (error) {
                return error;
           }
+     }
+
+     realTime(criptoIds = [
+          1, 1027, 825, 1839, 3408, 5426, 2010, 52, 4172, 6636, 5805, 74, 3890, 5994, 4687, 1975, 3635, 3717, 6535, 7129, 7083, 4943, 4030, 2, 3794, 1831, 3513, 1958, 512, 8916, 4195, 1966, 4642, 3077, 4023, 6783, 6210, 2280, 6892, 2416, 1321, 2011, 3957, 3945, 328, 4256, 5665, 1720, 7278, 7186, 1765, 6719, 4847, 3718, 4558, 7080, 5034, 6538, 3602, 4157, 1518, 3155, 2130, 1934, 1437, 5567, 10791, 6945, 7653, 1376, 5632, 1697, 4066, 2087, 5647, 1274, 3897, 131, 2502, 2563, 8646, 2694, 5692, 5864, 2634, 2682, 873, 2577, 2777, 8104, 5604, 3330, 6758, 3822, 7501, 1727, 3801, 1168, 9816, 3640, 9023, 9022, 5824
+     ], callback){
+          socketController(criptoIds, call => {
+               callback(call)
+          })
      }
 
      async category() {

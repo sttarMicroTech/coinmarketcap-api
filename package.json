@@ -1,6 +1,6 @@
 {
   "name": "coinmarketcaps-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "api for coinmarketcap",
   "main": "index.js",
   "scripts": {
@@ -43,6 +43,11 @@
   "dependencies": {
     "axios": "^0.24.0",
     "axios-cookiejar-support": "^2.0.3",
-    "tough-cookie": "^4.0.0"
+    "socket.io": "^4.4.1",
+    "socket.io-cli": "^0.2.0",
+    "socket.io-client": "^4.4.1",
+    "tough-cookie": "^4.0.0",
+    "websocket": "^1.0.34",
+    "ws": "^8.4.0"
   }
 }

@@ -9,8 +9,12 @@ var coin = new marketcap();
      // var coins = await coin.rank();
      // var coins = await coin.halfYear(1);
      // var coins = await coin.historical(2);
-     var coins = await coin.query();
+     // var coins = await coin.query();
      //var coins = await coin.category();
-     console.log(coins)
+     // console.log(coins)
+
+     coin.realTime([1, 2], call => {
+          console.log(call)
+     })
 })();
 
